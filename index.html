@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gemini 神级模型实验室</title>
+    <title>Gemini 全能模型实验室</title>
     <meta charset="utf-8">
     <style>
         body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; background: #f0f2f5; }
@@ -12,23 +12,30 @@
         input { flex-grow: 1; font-size: 16px; }
         button { padding: 12px 25px; background: #1a73e8; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
         button:hover { background: #1557b0; }
-        .model-tag { font-size: 12px; color: #666; margin-bottom: 5px; }
+        .status-info { font-size: 12px; color: #666; margin-bottom: 10px; padding: 10px; background: #eef; border-radius: 5px; }
     </style>
 </head>
 <body>
     <div class="card">
-        <h2>Gemini 顶级模型实验室</h2>
+        <h2>Gemini 全能模型实验室</h2>
         
-        <div class="model-tag">当前选择的模型：</div>
+        <div class="status-info">
+            💡 提示：如果 3.1 系列报 429 错误，请切换到 <b>1.5 Flash</b> 或 <b>2.0 Flash</b>，它们的额度最高。
+        </div>
+
         <div class="controls">
+            <label>选择模型：</label>
             <select id="modelSelect">
-                <!-- 根据你的探测列表挑选的最强模型 -->
-                <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro (最强智能)</option>
-                <option value="gemini-3.1-flash-lite-preview">Gemini 3.1 Flash Lite (极速)</option>
+                <!-- 额度最高的保底模型 -->
+                <option value="gemini-1.5-flash">Gemini 1.5 Flash (最稳/额度最高)</option>
+                <option value="gemini-2.0-flash">Gemini 2.0 Flash (极速/推荐)</option>
+                
+                <!-- 顶级预览模型 -->
+                <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro (顶级/额度极少)</option>
+                <option value="gemini-3.1-flash-lite-preview">Gemini 3.1 Flash Lite</option>
                 <option value="gemini-3-pro-preview">Gemini 3 Pro Preview</option>
                 <option value="gemini-3-flash-preview">Gemini 3 Flash Preview</option>
-                <option value="deep-research-pro-preview-12-2025">Deep Research (深度搜索研究)</option>
-                <option value="gemini-2.0-pro-exp-02-05">Gemini 2.0 Pro (经典强力)</option>
+                <option value="deep-research-pro-preview-12-2025">Deep Research (深度研究)</option>
             </select>
         </div>
 
